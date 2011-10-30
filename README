@@ -1,2 +1,7 @@
 http://openerp24hrs.blogspot.com/
 
+git add <files>
+git commit -m '<explain yourself here>'
+# git remote add origin git@github.com:martinhbramwell/SeleniumForOpenERP.git
+git push -u origin master
+
