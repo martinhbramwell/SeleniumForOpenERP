@@ -17,39 +17,184 @@
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
+	<td>waitForTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
+	<td>Configure Your Interface</td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=action_next</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTable</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table/tbody/tr[2]/td/table.0.0</td>
-	<td>Simplified Extended</td>
+	<td>setTimeout</td>
+	<td>30000</td>
+	<td>30000</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table/tbody/tr[2]/td/table/tbody/tr/td/select[@id='view']</td>
+	<td>id=view</td>
 	<td>Extended</td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td[2]/button[@id='action_next']</td>
+	<td>id=action_next</td>
 	<td>Next</td>
 </tr>
 <tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Configure Your Company Information</td>
+	<td>ExpectingCompanyConfiguration</td>
+</tr>
+<tr>
+	<td>storeTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
+	<td>OfferingCompanyConfiguration</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>'${OfferingCompanyConfiguration}'&nbsp;&nbsp;!=&nbsp;&nbsp;'${ExpectingCompanyConfiguration}'</td>
+	<td>target2</td>
+</tr>
+<tr>
 	<td>assertElementPresent</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr[5]/td[3]/label</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=label.help</td>
+	<td>Company Website</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currency</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//*[@id=&quot;name&quot;]</td>
-	<td>LogiChem S.A.</td>
+	<td>id=name</td>
+	<td>LogiChem Solutions S.A.</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=currency</td>
+	<td>USD ($)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_next</td>
+	<td>Next</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>target2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Install Applications</td>
+	<td>ExpectingInstallApplications</td>
+</tr>
+<tr>
+	<td>storeTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
+	<td>OfferingInstallApplication</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>'${OfferingInstallApplication}'&nbsp;&nbsp;!=&nbsp;&nbsp;'${ExpectingInstallApplications}'</td>
+	<td>JumpTarget_2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table/tbody/tr[2]/td/table/tbody/tr[4]/td[3]/label</td>
+	<td>Accounting &amp; Finance</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeChecked</td>
+	<td>id=account_accountant_checkbox_</td>
+	<td>AccountingAndFinanceAlreadySelected</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${AccountingAndFinanceAlreadySelected}</td>
+	<td>AccountingAndFinanceAlreadySelectedTarget</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=account_accountant_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>AccountingAndFinanceAlreadySelectedTarget</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>180000</td>
+	<td>180000</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>30000</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>JumpTarget_2</td>
+	<td>JumpTarget_2</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>JumpTarget_2</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
