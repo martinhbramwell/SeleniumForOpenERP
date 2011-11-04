@@ -42,59 +42,9 @@
 	<td>Extended</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=action_next</td>
-	<td>Next</td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
-	<td>id=view_form</td>
+	<td>selectWindow</td>
+	<td>null</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=view_form</td>
-	<td></td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>Configure Your Company Information</td>
-	<td>ExpectingCompanyConfiguration</td>
-</tr>
-<tr>
-	<td>storeTable</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
-	<td>OfferingCompanyConfiguration</td>
-</tr>
-<tr>
-	<td>gotoIf</td>
-	<td>'${OfferingCompanyConfiguration}'&nbsp;&nbsp;!=&nbsp;&nbsp;'${ExpectingCompanyConfiguration}'</td>
-	<td>target2</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=action_next</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=label.help</td>
-	<td>Company Website</td>
-</tr>
-<tr>
-	<td>assertElementPresent</td>
-	<td>id=currency</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=name</td>
-	<td>LogiChem Solutions S.A.</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=currency</td>
-	<td>USD ($)</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -102,18 +52,13 @@
 	<td>Next</td>
 </tr>
 <tr>
-	<td>waitForElementNotPresent</td>
-	<td>id=view_form</td>
+	<td>waitForElementPresent</td>
+	<td>id=action_skip</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=view_form</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>target2</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]</td>
 	<td></td>
 </tr>
 <tr>
@@ -162,14 +107,44 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setTimeout</td>
+	<td>5000</td>
+	<td>5000</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=action_next</td>
 	<td></td>
 </tr>
 <tr>
 	<td>setTimeout</td>
-	<td>180000</td>
-	<td>180000</td>
+	<td>150000</td>
+	<td>150000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
+	<td>Configure Your Accounting Chart</td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>30000</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_skip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>2000</td>
+	<td>2000</td>
 </tr>
 <tr>
 	<td>waitForElementNotPresent</td>
@@ -184,6 +159,16 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=action_skip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=action_skip</td>
 	<td></td>
 </tr>
 <tr>

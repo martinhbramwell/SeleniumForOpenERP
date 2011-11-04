@@ -12,23 +12,53 @@
 <tr><td rowspan="1" colspan="3">OpenChartOfAccounts</td></tr>
 </thead><tbody>
 <tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>OpenERP</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
-	<td>link=Logout</td>
+	<td>//div[@id='applications_menu']/ul/li[2]/a/span</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=db</td>
+	<td>waitForTitle</td>
+	<td>Accounting Dashboard - OpenERP</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=user</td>
+	<td>waitForText</td>
+	<td>//ul[@id='sidenav-a']/li[15]/span</td>
+	<td>Configuration</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Financial Accounting</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=password</td>
+	<td>click</td>
+	<td>//ul[@id='sidenav-a']/li[15]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Financial Accounting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Accounts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Accounts</td>
 	<td></td>
 </tr>
 </tbody></table>

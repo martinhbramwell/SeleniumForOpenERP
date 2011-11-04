@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.122.165:8080/" />
+<title>Configure Company</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Company</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=config</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Replace image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Configure Your Company Information</td>
+	<td>ExpectingCompanyConfiguration</td>
+</tr>
+<tr>
+	<td>storeTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td[3]/table.0.0</td>
+	<td>OfferingCompanyConfiguration</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>'${OfferingCompanyConfiguration}'&nbsp;&nbsp;!=&nbsp;&nbsp;'${ExpectingCompanyConfiguration}'</td>
+	<td>JumpTarget</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=action_next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=label.help</td>
+	<td>Company Website</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=currency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>LogiChem Solutions S.A.</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=currency</td>
+	<td>USD ($)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_next</td>
+	<td>Next</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>JumpTarget</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_skip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>OpenERP S.A. (esrd)</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
