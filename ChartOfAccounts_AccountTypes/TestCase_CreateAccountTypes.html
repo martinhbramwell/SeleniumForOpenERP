@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.122.165:8080/" />
+<title>Create Account Types</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Create Account Types</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Accounts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Account Types</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>initForEach</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>addCollection</td>
+	<td>AcctTypes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;View&quot;, &quot;code&quot; : &quot;view&quot;, &quot;report_type&quot; : &quot;/&quot;, &quot;close_method&quot; : &quot;None&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Income&quot;, &quot;code&quot; : &quot;ncome&quot;, &quot;report_type&quot; : &quot;Profit &amp; Loss (Income Accounts)&quot;, &quot;close_method&quot; : &quot;Unreconciled&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Expense&quot;, &quot;code&quot; : &quot;expense&quot;, &quot;report_type&quot; : &quot;Profit &amp; Loss (Expense Accounts)&quot;, &quot;close_method&quot; : &quot;Unreconciled&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Equity&quot;, &quot;code&quot; : &quot;equity&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Cash&quot;, &quot;code&quot; : &quot;cash&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Asset&quot;, &quot;code&quot; : &quot;asset&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>AcctTypes</td>
+	<td>{&quot;name&quot; : &quot;Liability&quot;, &quot;code&quot; : &quot;liability&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[3]/td/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>storeFor</td>
+	<td>AcctTypes</td>
+	<td>aType</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.name);</td>
+	<td>reportName</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${reportName}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.code);</td>
+	<td>reportCode</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>${reportCode}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.report_type);</td>
+	<td>reportType</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=${reportType}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.close_method);</td>
+	<td>reportCloseMethod</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=${reportCloseMethod}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.............................................................................</td>
+	<td>.............................................................................</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>true</td>
+	<td>EOF</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Income</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=code</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>income</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=Profit &amp; Loss (Income Accounts)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=Unreconciled</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Expense</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>expense</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=Profit &amp; Loss (Expense Accounts)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=Unreconciled</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Cash</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>cash</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=Balance Sheet (Assets Accounts)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=Balance</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Asset</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>asset</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=Balance Sheet (Assets Accounts)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=Balance</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Liability</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>liability</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=report_type</td>
+	<td>label=Balance Sheet (Assets Accounts)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=close_method</td>
+	<td>label=Balance</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Equity</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>equity</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=report_type</td>
+	<td>Balance Sheet (Assets Accounts)</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=report_type</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=close_method</td>
+	<td>Balance</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=close_method</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Account Types</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
