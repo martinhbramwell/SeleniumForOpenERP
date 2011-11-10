@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://192.168.122.165:8080/" />
+<!-- link rel="selenium.base" href="http://192.168.122.165:8080/" /  -->
 <title>Create Account Types</title>
 </head>
 <body>
@@ -87,6 +87,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>label</td>
 	<td>======================================</td>
 	<td>======================================</td>
@@ -102,8 +112,28 @@
 	<td>reportName</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>(${aType}.code);</td>
+	<td>reportCode</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.report_type);</td>
+	<td>reportType</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aType}.close_method);</td>
+	<td>reportCloseMethod</td>
+</tr>
+<tr>
 	<td>echo</td>
 	<td>${reportName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>175</td>
 	<td></td>
 </tr>
 <tr>
@@ -112,19 +142,9 @@
 	<td>${reportName}</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aType}.code);</td>
-	<td>reportCode</td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=code</td>
 	<td>${reportCode}</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aType}.report_type);</td>
-	<td>reportType</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -132,14 +152,14 @@
 	<td>label=${reportType}</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aType}.close_method);</td>
-	<td>reportCloseMethod</td>
-</tr>
-<tr>
 	<td>select</td>
 	<td>id=close_method</td>
 	<td>label=${reportCloseMethod}</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>label</td>
