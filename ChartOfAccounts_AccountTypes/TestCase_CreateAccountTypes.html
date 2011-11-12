@@ -12,8 +12,18 @@
 <tr><td rowspan="1" colspan="3">Create Account Types</td></tr>
 </thead><tbody>
 <tr>
-	<td>click</td>
-	<td>link=Accounts</td>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Account Types</td>
 	<td></td>
 </tr>
 <tr>
@@ -67,6 +77,11 @@
 	<td>{&quot;name&quot; : &quot;Asset&quot;, &quot;code&quot; : &quot;asset&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
 </tr>
 <tr>
+	<td>setSpeed</td>
+	<td>400</td>
+	<td></td>
+</tr>
+<tr>
 	<td>addToCollection</td>
 	<td>AcctTypes</td>
 	<td>{&quot;name&quot; : &quot;Liability&quot;, &quot;code&quot; : &quot;liability&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
@@ -82,6 +97,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Save &amp; Edit</td>
 	<td></td>
@@ -89,16 +109,6 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[3]/td/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeSpeed</td>
-	<td>PriorSpeed</td>
-	<td>PriorSpeed</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -138,7 +148,7 @@
 </tr>
 <tr>
 	<td>setSpeed</td>
-	<td>175</td>
+	<td>400</td>
 	<td></td>
 </tr>
 <tr>
@@ -153,13 +163,13 @@
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=report_type</td>
-	<td>label=${reportType}</td>
+	<td>id=close_method</td>
+	<td>label=${reportCloseMethod}</td>
 </tr>
 <tr>
 	<td>select</td>
-	<td>id=close_method</td>
-	<td>label=${reportCloseMethod}</td>
+	<td>id=report_type</td>
+	<td>label=${reportType}</td>
 </tr>
 <tr>
 	<td>setSpeed</td>
@@ -205,6 +215,11 @@
 	<td>label</td>
 	<td>======================================</td>
 	<td>======================================</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
