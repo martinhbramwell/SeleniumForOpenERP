@@ -26,6 +26,81 @@
 	<td>PriorSpeed</td>
 </tr>
 <tr>
+	<td>addCollection</td>
+	<td>FiscalYears</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>------------------------------------------------------------------</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2010&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2010&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2010&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2011&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2011&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2011&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2011&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/29/2012&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2012&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2012&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2012&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2013&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2013&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2013&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2013&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2014&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2014&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2014&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2014&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2015&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2015&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2015&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2015&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/29/2016&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2016&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2016&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2016&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2017&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2017&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2017&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2017&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2018&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2018&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2018&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2018&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2019&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2019&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2019&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2019&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/29/2020&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>FiscalYears</td>
+	<td>{&quot;fyCode&quot; : &quot;FY2020&quot;,&nbsp;&nbsp;&nbsp;&quot;fyName&quot; : &quot;Fiscal Year 2020&quot;,&nbsp;&nbsp;&quot;fyStart&quot; : &quot;3/1/2020&quot;,&nbsp;&nbsp;&nbsp;&quot;fyEnd&quot; : &quot;2/28/2021&quot;}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>------------------------------------------------------------------</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>------------------------------------------------------------------</td>
+</tr>
+<tr>
 	<td>setSpeed</td>
 	<td>100</td>
 	<td></td>
@@ -41,8 +116,43 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeFor</td>
+	<td>FiscalYears</td>
+	<td>aYear</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aYear}.fyCode);</td>
+	<td>yearCode</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aYear}.fyName);</td>
+	<td>yearName</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aYear}.fyStart);</td>
+	<td>yearStart</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aYear}.fyEnd);</td>
+	<td>yearEnd</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yearName}</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,17 +163,27 @@
 <tr>
 	<td>type</td>
 	<td>id=name</td>
-	<td>Fiscal Year 2011</td>
+	<td>${yearName}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=name</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=code</td>
-	<td>FY2011</td>
+	<td>${yearCode}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=name</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=date_start</td>
-	<td>03/01/2011</td>
+	<td>${yearStart}</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -73,11 +193,21 @@
 <tr>
 	<td>type</td>
 	<td>id=date_stop</td>
-	<td>02/29/2012</td>
+	<td>${yearEnd}</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
 	<td>id=date_stop</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${yearName}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=name</td>
 	<td>blur</td>
 </tr>
 <tr>
@@ -121,69 +251,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>label</td>
-	<td>--- start loop ---</td>
+	<td>endFor</td>
 	<td></td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Save &amp; Edit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=name</td>
-	<td>Fiscal Year 2012</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=code</td>
-	<td>FY2012</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=date_start</td>
-	<td>03/01/2012</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=date_start</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=date_stop</td>
-	<td>02/28/2013</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=date_stop</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=create_period</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForTable</td>
-	<td>css=table.pager-table.0.4</td>
-	<td>&lt;&lt; First &lt; Previous 1 - 12 of 12 Next &gt; Last &gt;&gt;</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Duplicate</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>--- end loop ---</td>
-	<td></td>
+	<td>echo</td>
+	<td>============================================</td>
+	<td>============================================</td>
 </tr>
 </tbody></table>
 </body>
