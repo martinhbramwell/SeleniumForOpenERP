@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Delete All Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Delete All Fiscal Years</td></tr>
+</thead><tbody>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Partner Categories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Partner Categories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Search: Partner Categories</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${DetectingDeleteButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>((${Crowbar} &gt; 0) &amp;&amp; (${DetectingDeleteButton} ))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_delete_record</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_delete_record</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Do you really want to delete selected record(s) ?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>eval(${Crowbar} - 1)</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${DetectingDeleteButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>--- end loop --</td>
+	<td></td>
+</tr>
