@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+<tr>
+	<td>echo</td>
+	<td>Starting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='tree_132']/tbody/tr[6]/td/table/tbody/tr/td[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>addCollection</td>
+	<td>Journals</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>Journals</td>
+	<td>{&quot;codeJournal&quot; : &quot;PUJ &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Purchase Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Purchase&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Sale/Purchase Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Purchase Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>Journals</td>
+	<td>{&quot;codeJournal&quot; : &quot;SAJ &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Sale Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Sale&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Sale/Purchase Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Sale Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>Journals</td>
+	<td>{&quot;codeJournal&quot; : &quot;BNK &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Bank Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Cash&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Bank/Cash Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Account Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>--------------xxxxxxx---------------------------------------------</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>190</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeFor</td>
+	<td>Journals</td>
+	<td>aJournal</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.codeJournal);</td>
+	<td>codeJournal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${codeJournal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.nameJournal);</td>
+	<td>nameJournal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nameJournal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.typeJournal);</td>
+	<td>typeJournal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${typeJournal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.viewJournal);</td>
+	<td>viewJournal</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${viewJournal}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.entrySequence);</td>
+	<td>entrySequence</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${entrySequence}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.acctDebit);</td>
+	<td>acctDebit</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctDebit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aJournal}.acctCredit);</td>
+	<td>acctCredit</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctCredit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=code</td>
+	<td>${codeJournal}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=code</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${nameJournal}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=name</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=view_id</td>
+	<td>label=${viewJournal}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=view_id</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=type</td>
+	<td>label=${typeJournal}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=type</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=sequence_id_text</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=sequence_id_text</td>
+	<td>${entrySequence}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=sequence_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=default_debit_account_id_text</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_debit_account_id_text</td>
+	<td>${acctDebit}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=default_debit_account_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=default_credit_account_id_text</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_credit_account_id_text</td>
+	<td>${acctCredit}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=default_credit_account_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Accounts Type Allowed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.tab-title &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='_notebook_1']/div[2]/div/div/table/tbody/tr[3]/td/table/tbody/tr[2]/td/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Group Invoice Lines </td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=tree</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
