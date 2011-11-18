@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+<tr>
+	<td>echo</td>
+	<td>Starting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Administration Dashboard - OpenERP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Administration Dashboard - OpenERP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Configuration Parameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Configuration Parameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>15</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>------------------------------------------------------------------</td>
+</tr>
+<tr>
+	<td>addCollection</td>
+	<td>ConfigurationParameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>ConfigurationParameters</td>
+	<td>{&quot;nameParameter&quot; : &quot;property_account_payable&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Account Payable&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1214&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;21001 Accounts Payable&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>ConfigurationParameters</td>
+	<td>{&quot;nameParameter&quot; : &quot;property_account_receivable&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Account Receivable&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1217&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;12001 Accounts Receivable&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>ConfigurationParameters</td>
+	<td>{&quot;nameParameter&quot; : &quot;property_account_expense_categ&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Expense Account&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Product Category&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1698&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;43110 Purchases&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>ConfigurationParameters</td>
+	<td>{&quot;nameParameter&quot; : &quot;property_account_income_categ&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Income Account&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Product Category&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1699&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;40100 Sales&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>ConfigurationParameters</td>
+	<td>{&quot;nameParameter&quot; : &quot;property_product_pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Sale Pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;868&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;product.pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;Public Pricelist&quot;}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>--------------xxxxxxx---------------------------------------------</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeFor</td>
+	<td>ConfigurationParameters</td>
+	<td>aParameter</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.nameParameter);</td>
+	<td>nameParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nameParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.fieldParameter);</td>
+	<td>fieldParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fieldParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.modelParameter);</td>
+	<td>modelParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${modelParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.recordParameter);</td>
+	<td>recordParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${recordParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.typeParameter);</td>
+	<td>typeParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${typeParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.valueParameter);</td>
+	<td>valueParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${valueParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aParameter}.acctParameter);</td>
+	<td>acctParameter</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>190</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${nameParameter}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=name</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fields_id_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field_description</td>
+	<td>${fieldParameter}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=model_id_text</td>
+	<td>${modelParameter}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>id=_terp_list_grid.1.1</td>
+	<td>${nameParameter}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list/${recordParameter}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=fields_id_text</td>
+	<td>${fieldParameter}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=fields_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=type</td>
+	<td>label=${typeParameter}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=type</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=value_reference_reference</td>
+	<td>label=${valueParameter}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=value_reference_reference</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=value_reference_text</td>
+	<td>${acctParameter}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=value_reference_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Duplicate</td>
+	<td>Duplicate</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+</tbody></table>
+</body>
+</html>
