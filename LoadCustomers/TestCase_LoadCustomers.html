@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Search: Customers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Customers - OpenERP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>------------------------------------------------------------------</td>
+</tr>
+<tr>
+	<td>addCollection</td>
+	<td>Partners</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>Partners</td>
+	<td>{&quot;namePartner&quot; : &quot;Plumbing Component Suppliers&quot;,&nbsp;&nbsp;&nbsp;&quot;customerPartner&quot; : &quot;false&quot;,&nbsp;&nbsp;&nbsp;&quot;supplierPartner&quot; : &quot;true&quot;,&nbsp;&nbsp;&nbsp;&quot;contactnamePartner&quot; : &quot;Jean Poolley&quot;,&nbsp;&nbsp;&nbsp;&quot;addresstypePartner&quot; : &quot;Default&quot;}</td>
+</tr>
+<tr>
+	<td>addToCollection</td>
+	<td>Partners</td>
+	<td>{&quot;namePartner&quot; : &quot;Smith and Offspring&quot;,&nbsp;&nbsp;&nbsp;&quot;customerPartner&quot; : &quot;true&quot;,&nbsp;&nbsp;&nbsp;&quot;supplierPartner&quot; : &quot;false&quot;,&nbsp;&nbsp;&nbsp;&quot;contactnamePartner&quot; : &quot;Stephen Smith&quot;,&nbsp;&nbsp;&nbsp;&quot;addresstypePartner&quot; : &quot;Default&quot;}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>------------------------------------------------------------------</td>
+	<td>--------------xxxxxxx---------------------------------------------</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>90</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeFor</td>
+	<td>Partners</td>
+	<td>aPartner</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aPartner}.namePartner);</td>
+	<td>namePartner</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${namePartner}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aPartner}.customerPartner);</td>
+	<td>customerPartner</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${customerPartner}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aPartner}.supplierPartner);</td>
+	<td>supplierPartner</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${supplierPartner}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aPartner}.contactnamePartner);</td>
+	<td>contactnamePartner</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${contactnamePartner}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${aPartner}.addresstypePartner);</td>
+	<td>addresstypePartner</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${addresstypePartner}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>50</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${customerPartner}</td>
+	<td>isCustomer</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>doneCustomer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>isCustomer</td>
+	<td>*** isCustomer ***</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=category_id_add_records</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//input[@type='text' and @class='char' and @name='name' and @id='name']</td>
+	<td>Customers</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text' and @class='char' and @name='name' and @id='name']</td>
+	<td>Customers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span[name=&quot;complete_name&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span[name=&quot;complete_name&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>doneCustomer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${supplierPartner}</td>
+	<td>isSupplier</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>doneSupplier</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>isSupplier</td>
+	<td>*** isSupplier ***</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=category_id_add_records</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//input[@type='text' and @class='char' and @name='name' and @id='name']</td>
+	<td>Suppliers</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text' and @class='char' and @name='name' and @id='name']</td>
+	<td>Suppliers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span[name=&quot;complete_name&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span[name=&quot;complete_name&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>doneSupplier</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>150</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${namePartner}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=address/name</td>
+	<td>${contactnamePartner}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=address/type</td>
+	<td>label=${addresstypePartner}</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=tree</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
