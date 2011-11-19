@@ -63,7 +63,7 @@
 <tr>
 	<td>label</td>
 	<td>------------------------------------------------------------------</td>
-	<td>--------------xxxxxxx---------------------------------------------</td>
+	<td>-----------------------------------------------------------</td>
 </tr>
 <tr>
 	<td>setSpeed</td>
@@ -157,7 +157,7 @@
 </tr>
 <tr>
 	<td>setSpeed</td>
-	<td>50</td>
+	<td>150</td>
 	<td></td>
 </tr>
 <tr>
@@ -171,34 +171,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=customer_checkbox_</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=supplier_checkbox_</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=supplier_checkbox_</td>
-	<td></td>
-</tr>
-<tr>
 	<td>gotoIf</td>
 	<td>${customerPartner}</td>
 	<td>isCustomer</td>
 </tr>
 <tr>
-	<td>uncheck</td>
+	<td>storeChecked</td>
 	<td>id=customer_checkbox_</td>
-	<td></td>
+	<td>isCheckedCustomer</td>
 </tr>
 <tr>
-	<td>fireEvent</td>
+	<td>gotoIf</td>
+	<td>! ${isCheckedCustomer}</td>
+	<td>doneCustomer</td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=customer_checkbox_</td>
-	<td>blur</td>
+	<td></td>
 </tr>
 <tr>
 	<td>goto</td>
@@ -211,16 +201,6 @@
 	<td>*** isCustomer ***</td>
 </tr>
 <tr>
-	<td>check</td>
-	<td>id=customer_checkbox_</td>
-	<td></td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=customer_checkbox_</td>
-	<td>blur</td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>id=category_id_add_records</td>
 	<td></td>
@@ -251,9 +231,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeChecked</td>
+	<td>id=customer_checkbox_</td>
+	<td>isCheckedCustomer</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${isCheckedCustomer}</td>
+	<td>doneCustomer</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
 	<td>label</td>
 	<td>doneCustomer</td>
-	<td></td>
+	<td>*** doneCustomer ***</td>
 </tr>
 <tr>
 	<td>label</td>
@@ -266,14 +261,19 @@
 	<td>isSupplier</td>
 </tr>
 <tr>
-	<td>uncheck</td>
+	<td>storeChecked</td>
 	<td>id=supplier_checkbox_</td>
-	<td></td>
+	<td>isCheckedSupplier</td>
 </tr>
 <tr>
-	<td>fireEvent</td>
+	<td>gotoIf</td>
+	<td>! ${isCheckedSupplier}</td>
+	<td>doneSupplier</td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=supplier_checkbox_</td>
-	<td>blur</td>
+	<td></td>
 </tr>
 <tr>
 	<td>goto</td>
@@ -284,16 +284,6 @@
 	<td>label</td>
 	<td>isSupplier</td>
 	<td>*** isSupplier ***</td>
-</tr>
-<tr>
-	<td>check</td>
-	<td>id=supplier_checkbox_</td>
-	<td></td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=supplier_checkbox_</td>
-	<td>blur</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -326,9 +316,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeChecked</td>
+	<td>id=supplier_checkbox_</td>
+	<td>isCheckedSupplier</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${isCheckedSupplier}</td>
+	<td>doneSupplier</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
 	<td>label</td>
 	<td>doneSupplier</td>
-	<td></td>
+	<td>*** doneSupplier ***</td>
 </tr>
 <tr>
 	<td>label</td>

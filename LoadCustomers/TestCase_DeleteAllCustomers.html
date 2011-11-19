@@ -21,11 +21,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>css=input.checkbox.grid-record-selector</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeSpeed</td>
 	<td>PriorSpeed</td>
 	<td>PriorSpeed</td>
@@ -36,18 +31,78 @@
 	<td>Crowbar</td>
 </tr>
 <tr>
-	<td>store</td>
-	<td>&lt;&lt; First &lt; Previous 0 - 0 of 0 Next &gt; Last &gt;&gt;</td>
-	<td>ExpectingDeleteButton</td>
+	<td>label</td>
+	<td>==&nbsp;&nbsp;Turn off all buttons ==</td>
+	<td>======================================</td>
 </tr>
 <tr>
-	<td>storeTable</td>
-	<td>css=table.pager-table.0.4</td>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td>ActiveButton</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${ActiveButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td>ActiveButton</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td> - -&nbsp;&nbsp;all active buttons are now unchecked&nbsp;&nbsp;- - </td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>====&nbsp;&nbsp;All buttons now turned off&nbsp;&nbsp;====</td>
+	<td>===============================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button' and @title='Customer Partners']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>====&nbsp;&nbsp;Customers button now turned on&nbsp;&nbsp;====</td>
+	<td>===============================</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>350</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
 	<td>DetectingDeleteButton</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${ExpectingDeleteButton}</td>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -62,18 +117,13 @@
 </tr>
 <tr>
 	<td>while</td>
-	<td>(((${Crowbar} &gt; 0) &amp;&amp; ('${DetectingDeleteButton}' != '${ExpectingDeleteButton}')))</td>
+	<td>((${Crowbar} &gt; 0) &amp;&amp; (${DetectingDeleteButton}))</td>
 	<td></td>
 </tr>
 <tr>
 	<td>label</td>
 	<td>======================================</td>
 	<td>======================================</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=input.checkbox.grid-record-selector</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -116,8 +166,178 @@
 	<td>Crowbar</td>
 </tr>
 <tr>
-	<td>storeTable</td>
-	<td>css=table.pager-table.0.4</td>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>--- end loop --</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>==&nbsp;&nbsp;Turn off all buttons ==</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td>ActiveButton</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${ActiveButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td>ActiveButton</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td> - -&nbsp;&nbsp;all active buttons are now unchecked&nbsp;&nbsp;- - </td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>====&nbsp;&nbsp;All buttons now turned off&nbsp;&nbsp;====</td>
+	<td>===============================</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button' and @title='Supplier Partners']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>====&nbsp;&nbsp;Suppers button now turned on&nbsp;&nbsp;====</td>
+	<td>===============================</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>350</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${DetectingDeleteButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>((${Crowbar} &gt; 0) &amp;&amp; (${DetectingDeleteButton}))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>======================================</td>
+	<td>======================================</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_delete_record</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>350</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>MustHaveAConfirmationHere</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_delete_record</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Do you really want to delete selected record(s) ?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>PriorSpeed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>eval(${Crowbar} - 1)</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
 	<td>DetectingDeleteButton</td>
 </tr>
 <tr>
