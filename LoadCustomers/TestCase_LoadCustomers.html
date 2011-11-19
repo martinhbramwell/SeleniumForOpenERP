@@ -166,6 +166,26 @@
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
 	<td>gotoIf</td>
 	<td>${customerPartner}</td>
 	<td>isCustomer</td>
@@ -174,6 +194,11 @@
 	<td>uncheck</td>
 	<td>id=customer_checkbox_</td>
 	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=customer_checkbox_</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>goto</td>
@@ -189,6 +214,11 @@
 	<td>check</td>
 	<td>id=customer_checkbox_</td>
 	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=customer_checkbox_</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -241,6 +271,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>fireEvent</td>
+	<td>id=supplier_checkbox_</td>
+	<td>blur</td>
+</tr>
+<tr>
 	<td>goto</td>
 	<td>doneSupplier</td>
 	<td></td>
@@ -254,6 +289,11 @@
 	<td>check</td>
 	<td>id=supplier_checkbox_</td>
 	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=supplier_checkbox_</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -301,14 +341,29 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=name</td>
 	<td>${namePartner}</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=address/name</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=address/name</td>
 	<td>${contactnamePartner}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=address/type</td>
+	<td></td>
 </tr>
 <tr>
 	<td>select</td>
