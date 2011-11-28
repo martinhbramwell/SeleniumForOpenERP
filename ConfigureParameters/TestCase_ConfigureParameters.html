@@ -62,68 +62,18 @@
 </tr>
 <tr>
 	<td>label</td>
-	<td>------------------------------------------------------------------</td>
-	<td>------------------------------------------------------------------</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
-	<td>addCollection</td>
-	<td>ConfigurationParameters</td>
+	<td>forJson</td>
+	<td>ConfigureParameters.json</td>
 	<td></td>
 </tr>
 <tr>
 	<td>label</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>ConfigurationParameters</td>
-	<td>{&quot;nameParameter&quot; : &quot;property_account_payable&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Account Payable&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1214&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;21001 Accounts Payable&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>ConfigurationParameters</td>
-	<td>{&quot;nameParameter&quot; : &quot;property_account_receivable&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Account Receivable&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1217&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;12001 Accounts Receivable&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>ConfigurationParameters</td>
-	<td>{&quot;nameParameter&quot; : &quot;property_account_expense_categ&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Expense Account&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Product Category&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1698&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;43110 Purchases&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>ConfigurationParameters</td>
-	<td>{&quot;nameParameter&quot; : &quot;property_account_income_categ&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Income Account&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Product Category&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;1699&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;account.account&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;40100 Sales&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>ConfigurationParameters</td>
-	<td>{&quot;nameParameter&quot; : &quot;property_product_pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;fieldParameter&quot; : &quot;Sale Pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;modelParameter&quot; : &quot;Partner&quot;,&nbsp;&nbsp;&nbsp;&quot;recordParameter&quot; : &quot;868&quot;,&nbsp;&nbsp;&nbsp;&quot;typeParameter&quot; : &quot;Many2One&quot;,&nbsp;&nbsp;&nbsp;&quot;valueParameter&quot; : &quot;product.pricelist&quot;,&nbsp;&nbsp;&nbsp;&quot;acctParameter&quot; : &quot;Public Pricelist&quot;}</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>------------------------------------------------------------------</td>
-	<td>--------------xxxxxxx---------------------------------------------</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>storeFor</td>
-	<td>ConfigurationParameters</td>
-	<td>aParameter</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.nameParameter);</td>
-	<td>nameParameter</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -131,19 +81,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.fieldParameter);</td>
-	<td>fieldParameter</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${fieldParameter}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.modelParameter);</td>
-	<td>modelParameter</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -151,19 +91,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.recordParameter);</td>
-	<td>recordParameter</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${recordParameter}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.typeParameter);</td>
-	<td>typeParameter</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -171,19 +101,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.valueParameter);</td>
-	<td>valueParameter</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${valueParameter}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aParameter}.acctParameter);</td>
-	<td>acctParameter</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -301,7 +221,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>endFor</td>
+	<td>endForJson</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>

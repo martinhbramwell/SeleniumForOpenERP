@@ -1,0 +1,4 @@
+{"codeJournal" : "PUJ ",   "nameJournal" : "Purchase Journal",   "typeJournal" : "Purchase",   "viewJournal" : "Sale/Purchase Journal View",   "entrySequence" : "Purchase Journal",   "acctDebit" : "43110 Purchases",   "acctCredit" : "43110 Purchases"}						
+{"codeJournal" : "SAJ ",   "nameJournal" : "Sale Journal",   "typeJournal" : "Sale",   "viewJournal" : "Sale/Purchase Journal View",   "entrySequence" : "Sale Journal",   "acctDebit" : "40110 Sales of Goods or Services",   "acctCredit" : "40110 Sales of Goods or Services"}						
+{"codeJournal" : "BNK ",   "nameJournal" : "Bank Journal",   "typeJournal" : "Cash",   "viewJournal" : "Bank/Cash Journal View",   "entrySequence" : "Account Journal",   "acctDebit" : "11001 Cash in Checking",   "acctCredit" : "11001 Cash in Checking"}						
+

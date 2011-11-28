@@ -1,0 +1,60 @@
+{"acctCode" : "00000",   "acctTitle" : "LogiChem -- Chart of Accts",   "InternalType" : "View",   "Parent" : "",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "10000",   "acctTitle" : "Assets",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "11000",   "acctTitle" : "Cash",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "11001",   "acctTitle" : "Cash in Checking",   "InternalType" : "Regular",   "Parent" : "Cash",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "11002",   "acctTitle" : "Cash in Savings",   "InternalType" : "Regular",   "Parent" : "Cash",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "11003",   "acctTitle" : "Cash on Hand",   "InternalType" : "Regular",   "Parent" : "Cash",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "12000",   "acctTitle" : "Accounts Receivable",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "12001",   "acctTitle" : "Accounts Receivable",   "InternalType" : "Receivable",   "Parent" : "Accounts Receivable",   "AccountType" : "Asset",   "acctReconcile" : "true"}					
+					
+{"acctCode" : "13000",   "acctTitle" : "Inventory",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "13001",   "acctTitle" : "Inventory",   "InternalType" : "Regular",   "Parent" : "Inventory",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "14000",   "acctTitle" : "Land",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "14001",   "acctTitle" : "Land",   "InternalType" : "Regular",   "Parent" : "Land",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "14040",   "acctTitle" : "Building",   "InternalType" : "Regular",   "Parent" : "Land",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "14080",   "acctTitle" : "Accumulated Depreciation–Building",   "InternalType" : "Regular",   "Parent" : "Land",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "15000",   "acctTitle" : "Depreciables",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "15001",   "acctTitle" : "Leasehold Improvements",   "InternalType" : "Regular",   "Parent" : "Depreciables",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "15040",   "acctTitle" : "Depreciation-Leasehold Improvements (Accumulated)",   "InternalType" : "Regular",   "Parent" : "Depreciables",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "15060",   "acctTitle" : "Vehicles",   "InternalType" : "Regular",   "Parent" : "Depreciables",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "15080",   "acctTitle" : "Depreciation-Vehicles (Accumulated)",   "InternalType" : "Regular",   "Parent" : "Depreciables",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "16000",   "acctTitle" : "Capital Equipment",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "16001",   "acctTitle" : "Furniture &amp; Fixtures",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16010",   "acctTitle" : "Accumulated Depreciation–Furniture &amp; Fixtures",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16050",   "acctTitle" : "Equipment",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16051",   "acctTitle" : "Accumulated Depreciation–Equipment",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16070",   "acctTitle" : "Organization Costs",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16071",   "acctTitle" : "Amortization–Organization Costs",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+{"acctCode" : "16080",   "acctTitle" : "Deposits",   "InternalType" : "Regular",   "Parent" : "Capital Equipment",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "17060",   "acctTitle" : "Other Assets",   "InternalType" : "View",   "Parent" : "Assets",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "17061",   "acctTitle" : "Patents",   "InternalType" : "Regular",   "Parent" : "Other Assets",   "AccountType" : "Asset",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "20001",   "acctTitle" : "Liabilities",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "21000",   "acctTitle" : "Accounts Payable",   "InternalType" : "View",   "Parent" : "Liabilities",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "21001",   "acctTitle" : "Accounts Payable",   "InternalType" : "Payable",   "Parent" : "Accounts Payable",   "AccountType" : "Liability",   "acctReconcile" : "true"}					
+					
+{"acctCode" : "22000",   "acctTitle" : "Taxes",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "22001",   "acctTitle" : "Sales Tax Collected",   "InternalType" : "Regular",   "Parent" : "Taxes",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+{"acctCode" : "22051",   "acctTitle" : "Accrued Payroll Taxes",   "InternalType" : "Regular",   "Parent" : "Taxes",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "25000",   "acctTitle" : "Loans",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "25001",   "acctTitle" : "Loan Payable–First National Bank",   "InternalType" : "Regular",   "Parent" : "Loans",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+{"acctCode" : "25051",   "acctTitle" : "Loan Payable–John Doe",   "InternalType" : "Regular",   "Parent" : "Loans",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+{"acctCode" : "25061",   "acctTitle" : "Credit Card Payable–VISA",   "InternalType" : "Regular",   "Parent" : "Loans",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "26000",   "acctTitle" : "Miscellaneous",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "26001",   "acctTitle" : "Accrued Expenses",   "InternalType" : "Regular",   "Parent" : "Miscellaneous",   "AccountType" : "Liability",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "30000",   "acctTitle" : "Equity",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "30010",   "acctTitle" : "Common Stock",   "InternalType" : "Regular",   "Parent" : "Equity",   "AccountType" : "Equity",   "acctReconcile" : "false"}					
+{"acctCode" : "30040",   "acctTitle" : "Retained Earnings",   "InternalType" : "Regular",   "Parent" : "Equity",   "AccountType" : "Equity",   "acctReconcile" : "false"}					
+{"acctCode" : "32010",   "acctTitle" : "Capital",   "InternalType" : "Regular",   "Parent" : "Equity",   "AccountType" : "Equity",   "acctReconcile" : "false"}					
+{"acctCode" : "32020",   "acctTitle" : "Drawing",   "InternalType" : "Regular",   "Parent" : "Equity",   "AccountType" : "Equity",   "acctReconcile" : "false"}					

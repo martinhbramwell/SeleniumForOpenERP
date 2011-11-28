@@ -37,54 +37,9 @@
 	<td>======================================</td>
 </tr>
 <tr>
-	<td>addCollection</td>
-	<td>AcctTypes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;View&quot;, &quot;code&quot; : &quot;view&quot;, &quot;report_type&quot; : &quot;/&quot;, &quot;close_method&quot; : &quot;None&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Income&quot;, &quot;code&quot; : &quot;ncome&quot;, &quot;report_type&quot; : &quot;Profit &amp; Loss (Income Accounts)&quot;, &quot;close_method&quot; : &quot;Unreconciled&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Expense&quot;, &quot;code&quot; : &quot;expense&quot;, &quot;report_type&quot; : &quot;Profit &amp; Loss (Expense Accounts)&quot;, &quot;close_method&quot; : &quot;Unreconciled&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Cost of Sales&quot;, &quot;code&quot; : &quot;expense&quot;, &quot;report_type&quot; : &quot;Profit &amp; Loss (Expense Accounts)&quot;, &quot;close_method&quot; : &quot;Unreconciled&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Equity&quot;, &quot;code&quot; : &quot;equity&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Cash&quot;, &quot;code&quot; : &quot;cash&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Asset&quot;, &quot;code&quot; : &quot;asset&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
-</tr>
-<tr>
 	<td>setSpeed</td>
 	<td>400</td>
 	<td></td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>AcctTypes</td>
-	<td>{&quot;name&quot; : &quot;Liability&quot;, &quot;code&quot; : &quot;liability&quot;, &quot;report_type&quot; : &quot;Balance Sheet (Assets Accounts)&quot;, &quot;close_method&quot; : &quot;Balance&quot;}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -117,33 +72,8 @@
 	<td>======================================</td>
 </tr>
 <tr>
-	<td>storeFor</td>
-	<td>AcctTypes</td>
-	<td>aType</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aType}.name);</td>
-	<td>reportName</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aType}.code);</td>
-	<td>reportCode</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aType}.report_type);</td>
-	<td>reportType</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aType}.close_method);</td>
-	<td>reportCloseMethod</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${reportName}</td>
+	<td>forJson</td>
+	<td>AccountTypes.json</td>
 	<td></td>
 </tr>
 <tr>
@@ -154,22 +84,22 @@
 <tr>
 	<td>type</td>
 	<td>id=name</td>
-	<td>${reportName}</td>
+	<td>${name}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=code</td>
-	<td>${reportCode}</td>
+	<td>${code}</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=close_method</td>
-	<td>label=${reportCloseMethod}</td>
+	<td>label=${close_method}</td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=report_type</td>
-	<td>label=${reportType}</td>
+	<td>label=${report_type}</td>
 </tr>
 <tr>
 	<td>setSpeed</td>
@@ -207,8 +137,8 @@
 	<td>.............................................................................</td>
 </tr>
 <tr>
-	<td>endFor</td>
-	<td></td>
+	<td>endForJson</td>
+	<td>--- End For JSON ---</td>
 	<td></td>
 </tr>
 <tr>

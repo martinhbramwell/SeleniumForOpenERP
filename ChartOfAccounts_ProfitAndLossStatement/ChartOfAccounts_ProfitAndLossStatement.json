@@ -1,0 +1,65 @@
+{"acctCode" : "40000",   "acctTitle" : "Income",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "40100",   "acctTitle" : "Sales",   "InternalType" : "View",   "Parent" : "Income",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "40110",   "acctTitle" : "Sales of Goods or Services",   "InternalType" : "Regular",   "Parent" : "Sales",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+{"acctCode" : "40120",   "acctTitle" : "Sales Discounts",   "InternalType" : "Regular",   "Parent" : "Sales",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+{"acctCode" : "40130",   "acctTitle" : "Sales Returns and Allowances",   "InternalType" : "Regular",   "Parent" : "Sales",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "41000",   "acctTitle" : "Other Revenue",   "InternalType" : "View",   "Parent" : "Income",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "41150",   "acctTitle" : "Interest Income",   "InternalType" : "Regular",   "Parent" : "Other Revenue",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "41900",   "acctTitle" : "Miscellaneous Revenue",   "InternalType" : "View",   "Parent" : "Other Revenue",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "41990",   "acctTitle" : "Misc Income",   "InternalType" : "Regular",   "Parent" : "Miscellaneous Revenue",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "42000",   "acctTitle" : "Miscellaneous Sales",   "InternalType" : "View",   "Parent" : "Income",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "42100",   "acctTitle" : "Sale of Fixed Assets",   "InternalType" : "Regular",   "Parent" : "Miscellaneous Sales",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+{"acctCode" : "42900",   "acctTitle" : "Other Sales",   "InternalType" : "Regular",   "Parent" : "Miscellaneous Sales",   "AccountType" : "Income",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "43000",   "acctTitle" : "Cost of Sales",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "43100",   "acctTitle" : "Purchases in Support of Sales",   "InternalType" : "View",   "Parent" : "Cost of Sales",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "43110",   "acctTitle" : "Purchases",   "InternalType" : "Regular",   "Parent" : "Purchases in Support of Sales",   "AccountType" : "Cost of Sales",   "acctReconcile" : "false"}					
+{"acctCode" : "43120",   "acctTitle" : "Purchase Discounts",   "InternalType" : "Regular",   "Parent" : "Purchases in Support of Sales",   "AccountType" : "Cost of Sales",   "acctReconcile" : "false"}					
+{"acctCode" : "43140",   "acctTitle" : "Purchase Returns and Allowances",   "InternalType" : "Regular",   "Parent" : "Purchases in Support of Sales",   "AccountType" : "Cost of Sales",   "acctReconcile" : "false"}					
+{"acctCode" : "43160",   "acctTitle" : "Freight Charges",   "InternalType" : "Regular",   "Parent" : "Purchases in Support of Sales",   "AccountType" : "Cost of Sales",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "44000",   "acctTitle" : "Miscellaneous Costs",   "InternalType" : "View",   "Parent" : "Cost of Sales",   "AccountType" : "View",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "44900",   "acctTitle" : "Other Costs",   "InternalType" : "View",   "Parent" : "Miscellaneous Costs",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "44990",   "acctTitle" : "Other Costs",   "InternalType" : "Regular",   "Parent" : "Other Costs",   "AccountType" : "Cost of Sales",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "51000",   "acctTitle" : "Expense",   "InternalType" : "View",   "Parent" : "LogiChem -- Chart of Accts",   "AccountType" : "View",   "acctReconcile" : "false"}					
+{"acctCode" : "51100",   "acctTitle" : "Advertising",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "51150",   "acctTitle" : "Auto Expenses",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "60000",   "acctTitle" : "Salaries and Wages",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "61020",   "acctTitle" : "Bank Service Charges",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "61060",   "acctTitle" : "Depreciation Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "61070",   "acctTitle" : "Amortization Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "61080",   "acctTitle" : "Dues and Subscriptions",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "62000",   "acctTitle" : "Equipment Rental",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62020",   "acctTitle" : "Utilities",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62030",   "acctTitle" : "Insurance–Employees Group",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62040",   "acctTitle" : "Insurance–General",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62050",   "acctTitle" : "Insurance–Officers Life",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62060",   "acctTitle" : "Interest Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62070",   "acctTitle" : "Legal and Accounting",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62080",   "acctTitle" : "Miscellaneous Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "62090",   "acctTitle" : "Postage",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "63000",   "acctTitle" : "Office Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "63060",   "acctTitle" : "Rent Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "63080",   "acctTitle" : "Repairs and Maintenance",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "64090",   "acctTitle" : "Payroll Taxes",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "65000",   "acctTitle" : "Other Taxes",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "65010",   "acctTitle" : "Income Taxes",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+					
+{"acctCode" : "65020",   "acctTitle" : "Penalties",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "65030",   "acctTitle" : "Supplies",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "65040",   "acctTitle" : "Telephone Expense",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "65050",   "acctTitle" : "Travel",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					
+{"acctCode" : "65060",   "acctTitle" : "Meals",   "InternalType" : "Regular",   "Parent" : "Expense",   "AccountType" : "Expense",   "acctReconcile" : "false"}					

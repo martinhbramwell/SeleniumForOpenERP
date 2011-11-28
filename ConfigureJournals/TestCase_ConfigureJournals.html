@@ -31,31 +31,6 @@
 	<td>PriorSpeed</td>
 </tr>
 <tr>
-	<td>addCollection</td>
-	<td>Journals</td>
-	<td></td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>Journals</td>
-	<td>{&quot;codeJournal&quot; : &quot;PUJ &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Purchase Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Purchase&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Sale/Purchase Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Purchase Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>Journals</td>
-	<td>{&quot;codeJournal&quot; : &quot;SAJ &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Sale Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Sale&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Sale/Purchase Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Sale Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>Journals</td>
-	<td>{&quot;codeJournal&quot; : &quot;BNK &quot;,&nbsp;&nbsp;&nbsp;&quot;nameJournal&quot; : &quot;Bank Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;typeJournal&quot; : &quot;Cash&quot;,&nbsp;&nbsp;&nbsp;&quot;viewJournal&quot; : &quot;Bank/Cash Journal View&quot;,&nbsp;&nbsp;&nbsp;&quot;entrySequence&quot; : &quot;Account Journal&quot;,&nbsp;&nbsp;&nbsp;&quot;acctDebit&quot; : &quot;43110 Purchases&quot;,&nbsp;&nbsp;&nbsp;&quot;acctCredit&quot; : &quot;43110 Purchases&quot;}</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>------------------------------------------------------------------</td>
-	<td>--------------xxxxxxx---------------------------------------------</td>
-</tr>
-<tr>
 	<td>setSpeed</td>
 	<td>190</td>
 	<td></td>
@@ -82,13 +57,13 @@
 </tr>
 <tr>
 	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
-	<td>storeFor</td>
-	<td>Journals</td>
-	<td>aJournal</td>
+	<td>forJson</td>
+	<td>ConfigureJournals.json</td>
+	<td></td>
 </tr>
 <tr>
 	<td>label</td>
@@ -96,19 +71,9 @@
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.codeJournal);</td>
-	<td>codeJournal</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${codeJournal}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.nameJournal);</td>
-	<td>nameJournal</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -116,19 +81,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.typeJournal);</td>
-	<td>typeJournal</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${typeJournal}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.viewJournal);</td>
-	<td>viewJournal</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -136,29 +91,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.entrySequence);</td>
-	<td>entrySequence</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${entrySequence}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.acctDebit);</td>
-	<td>acctDebit</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${acctDebit}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aJournal}.acctCredit);</td>
-	<td>acctCredit</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -341,7 +281,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>endFor</td>
+	<td>endForJson</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>

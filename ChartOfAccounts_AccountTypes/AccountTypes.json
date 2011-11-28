@@ -1,0 +1,9 @@
+{"name" : "View",   "code" : "view",   "report_type" : "/",   "close_method" : "None"}								
+{"name" : "Income",   "code" : "income",   "report_type" : "Profit & Loss (Income Accounts)",   "close_method" : "Unreconciled"}								
+{"name" : "Expense",   "code" : "expense",   "report_type" : "Profit & Loss (Expense Accounts)",   "close_method" : "Unreconciled"}								
+{"name" : "Cost of Sales",   "code" : "expense",   "report_type" : "Profit & Loss (Expense Accounts)",   "close_method" : "Unreconciled"}								
+{"name" : "Equity",   "code" : "equity",   "report_type" : "Balance Sheet (Assets Accounts)",   "close_method" : "Balance"}								
+{"name" : "Cash",   "code" : "cash",   "report_type" : "Balance Sheet (Assets Accounts)",   "close_method" : "Balance"}								
+{"name" : "Liability",   "code" : "liability",   "report_type" : "Balance Sheet (Assets Accounts)",   "close_method" : "Balance"}								
+{"name" : "Asset",   "code" : "asset",   "report_type" : "Balance Sheet (Assets Accounts)",   "close_method" : "Balance"}								
+
