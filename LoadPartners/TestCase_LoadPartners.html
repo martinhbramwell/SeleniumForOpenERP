@@ -38,31 +38,6 @@
 <tr>
 	<td>label</td>
 	<td>------------------------------------------------------------------</td>
-	<td>------------------------------------------------------------------</td>
-</tr>
-<tr>
-	<td>addCollection</td>
-	<td>Partners</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>Partners</td>
-	<td>{&quot;namePartner&quot; : &quot;Plumbing Component Suppliers&quot;,&nbsp;&nbsp;&nbsp;&quot;customerPartner&quot; : &quot;false&quot;,&nbsp;&nbsp;&nbsp;&quot;supplierPartner&quot; : &quot;true&quot;,&nbsp;&nbsp;&nbsp;&quot;contactnamePartner&quot; : &quot;Jean Poolley&quot;,&nbsp;&nbsp;&nbsp;&quot;addresstypePartner&quot; : &quot;Default&quot;}</td>
-</tr>
-<tr>
-	<td>addToCollection</td>
-	<td>Partners</td>
-	<td>{&quot;namePartner&quot; : &quot;Smith and Offspring&quot;,&nbsp;&nbsp;&nbsp;&quot;customerPartner&quot; : &quot;true&quot;,&nbsp;&nbsp;&nbsp;&quot;supplierPartner&quot; : &quot;false&quot;,&nbsp;&nbsp;&nbsp;&quot;contactnamePartner&quot; : &quot;Stephen Smith&quot;,&nbsp;&nbsp;&nbsp;&quot;addresstypePartner&quot; : &quot;Default&quot;}</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>------------------------------------------------------------------</td>
 	<td>-----------------------------------------------------------</td>
 </tr>
 <tr>
@@ -96,9 +71,9 @@
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 </tr>
 <tr>
-	<td>storeFor</td>
-	<td>Partners</td>
-	<td>aPartner</td>
+	<td>forJson</td>
+	<td>LoadPartners.json</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>label</td>
@@ -106,19 +81,9 @@
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aPartner}.namePartner);</td>
-	<td>namePartner</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${namePartner}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aPartner}.customerPartner);</td>
-	<td>customerPartner</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -126,29 +91,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aPartner}.supplierPartner);</td>
-	<td>supplierPartner</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${supplierPartner}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(${aPartner}.contactnamePartner);</td>
-	<td>contactnamePartner</td>
-</tr>
-<tr>
 	<td>echo</td>
 	<td>${contactnamePartner}</td>
 	<td></td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>(${aPartner}.addresstypePartner);</td>
-	<td>addresstypePartner</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -396,7 +346,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>endFor</td>
+	<td>endForJson</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
