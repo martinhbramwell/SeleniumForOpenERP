@@ -5,3 +5,20 @@ git commit -m '<explain yourself here>'
 # git remote add origin git@github.com:martinhbramwell/SeleniumForOpenERP.git
 git push -u origin master
 
+
+Order of Execution :
+
+ - CreateVacantDatabase
+ - ConfigureAccounting
+ - ChartOfAccounts_AccountTypes
+ - ChartOfAccounts_BalanceSheetStatement
+ - ChartOfAccounts_ProfitAndLossStatement
+ - ConfigureParameters
+ - ConfigureJournals
+ - ConfigureFiscalYears
+ - ConfigureWarehouse
+ - ConfigurePartnerCategories
+ - LoadPartners
+ - LoadProductCategories  
+ - LoadProducts
+
