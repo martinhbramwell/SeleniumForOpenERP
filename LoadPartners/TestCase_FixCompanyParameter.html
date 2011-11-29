@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://openerplocal:8080/" />
 <title>Fix Company Parameter</title>
 </head>
 <body>
@@ -37,6 +36,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTable</td>
+	<td>id=_terp_list_grid.1.2</td>
+	<td>Just Trade</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=span[name=&quot;name&quot;]</td>
 	<td></td>
@@ -57,12 +61,22 @@
 	<td></td>
 </tr>
 <tr>
-	<td>uncheck</td>
+	<td>check</td>
 	<td>id=customer_checkbox_</td>
 	<td></td>
 </tr>
 <tr>
-	<td>uncheck</td>
+	<td>click</td>
+	<td>id=customer_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=supplier_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=supplier_checkbox_</td>
 	<td></td>
 </tr>
