@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+
+
+<tr>
+	<td>goto</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>we don't need this yet</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Search: Products</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Products - OpenERP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>90</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - .</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>forJson</td>
+	<td>LoadProducts.json</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nameProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${categoryProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${typeProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${buypriceProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${sellpriceProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>150</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>${nameProduct}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=categ_id_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//input[@type='text' and @class='char' and @maxlength='64'&nbsp;&nbsp;and @name='name' and @id='name']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@type='text' and @class='char' and @maxlength='64'&nbsp;&nbsp;and @name='name' and @id='name']</td>
+	<td>${categoryProduct}</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>id=name</td>
+	<td>${categoryProduct}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>id=_terp_list_grid.1.1</td>
+	<td>All products / Radiators</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td>id=&quot;_terp_list/4&quot; class=&quot;radio grid-record-selector&quot; type=&quot;radio&quot; onclick=&quot;new ListView('_terp_list').onBooleanClicked(!this.checked, '4'); do_select();&quot; value=&quot;4&quot; name=&quot;_terp_list&quot;</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@type='radio' and @class='radio grid-record-selector' and @name='_terp_list']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=type</td>
+	<td>label=${typeProduct}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=standard_price</td>
+	<td>${buypriceProduct}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=list_price</td>
+	<td>${sellpriceProduct}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>endForJson</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=tree</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
