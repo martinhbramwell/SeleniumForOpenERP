@@ -53,6 +53,16 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>id=_terp_list_new</td>
 	<td></td>
 </tr>
@@ -62,18 +72,28 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>500</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForValue</td>
 	<td>id=create_uid_text</td>
 	<td>Administrator</td>
 </tr>
 <tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -89,11 +109,6 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=pricelist_id_text</td>
-	<td></td>
-</tr>
-<tr>
-	<td>setSpeed</td>
-	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -132,9 +147,24 @@
 	<td>${nameSupplier}</td>
 </tr>
 <tr>
+	<td>waitForValue</td>
+	<td>id=partner_id_text</td>
+	<td>${nameSupplier}</td>
+</tr>
+<tr>
 	<td>fireEvent</td>
 	<td>id=partner_id_text</td>
 	<td>blur</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeEval</td>
@@ -227,9 +257,24 @@
 	<td>${nameProduct}</td>
 </tr>
 <tr>
+	<td>waitForValue</td>
+	<td>id=order_line/product_id_text</td>
+	<td>${nameProduct}</td>
+</tr>
+<tr>
 	<td>fireEvent</td>
 	<td>id=order_line/product_id_text</td>
 	<td>blur</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeEval</td>
