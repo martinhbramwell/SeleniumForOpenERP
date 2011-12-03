@@ -357,8 +357,33 @@
 	<td>${nameProduct}</td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>id=purchase_confirm</td>
+	<td>Convert to Purchase Order</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=button_dummy</td>
+	<td>Compute</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=purchase_confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>id=purchase_confirm</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=purchase_confirm</td>
 	<td></td>
 </tr>
 <tr>
