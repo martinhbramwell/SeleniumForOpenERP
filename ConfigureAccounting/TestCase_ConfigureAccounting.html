@@ -12,6 +12,26 @@
 <tr><td rowspan="1" colspan="3">Configure Accounting</td></tr>
 </thead><tbody>
 <tr>
+	<td>waitForTable</td>
+	<td>id=content.0.0</td>
+	<td>OpenERP S.A. (esrd) Administrator Skip to navigation [n] Skip to content [c] Skip to footer [f] Support <br /> Home Home 0 Requests Preferences Edit Preferences About About Help Help Logout<br /> <br /> <br /><br /> Customers Reconfigure</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#applications_menu &gt; ul &gt; li &gt; a &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=a &gt; table.1.0</td>
+	<td>Sales</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#3 &gt; span.wrap &gt; a &gt; table.1.0</td>
+	<td>Administration</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=#shortcut_65 &gt; span</td>
 	<td></td>
