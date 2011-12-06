@@ -12,43 +12,53 @@
 <tr><td rowspan="1" colspan="3">Create Account Types</td></tr>
 </thead><tbody>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//table[@id='tree_132']/tbody/tr[7]/td/table/tbody/tr/td[4]/a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//table[@id='tree_132']/tbody/tr[7]/td/table/tbody/tr/td[4]/a</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeSpeed</td>
 	<td>PriorSpeed</td>
 	<td>PriorSpeed</td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>500</td>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='tree_132']/tbody/tr[7]/td/table/tbody/tr/td[4]/a</td>
 	<td></td>
 </tr>
 <tr>
-	<td>label</td>
-	<td>------------------------------------------------------------------</td>
-	<td>------------------------------------------------------------------</td>
+	<td>click</td>
+	<td>//table[@id='tree_132']/tbody/tr[7]/td/table/tbody/tr/td[4]/a</td>
+	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=clear_all_filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=_terp_list_new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Save &amp; Edit</td>
 	<td></td>
 </tr>
 <tr>
@@ -57,8 +67,28 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>${Prior}</td>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=user_type_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=tax_ids_add_records</td>
 	<td></td>
 </tr>
 <tr>
@@ -98,8 +128,113 @@
 </tr>
 <tr>
 	<td>setSpeed</td>
-	<td>500</td>
+	<td>1</td>
 	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=code</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=parent_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=user_type_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=reconcile_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>fldCode</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>fldName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=type</td>
+	<td>fldType</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=parent_id_text</td>
+	<td>fldParent_Id_Text</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=user_type_text</td>
+	<td>fldUser_Type_Text</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=reconcile_checkbox_</td>
+	<td>fldReconcile_Checkbox_</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${fldCode}&quot; == &quot;&quot;) || (&quot;${fldName}&quot; == &quot;&quot;) || (&quot;${fldType}&quot; == &quot;&quot;) || (&quot;${fldUser_Type_Text}&quot; == &quot;&quot;))								</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_type_text</td>
+	<td>${AccountType}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=user_type_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=user_type_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=user_type_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=user_type_text</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -108,7 +243,7 @@
 </tr>
 <tr>
 	<td>setSpeed</td>
-	<td>175</td>
+	<td>1</td>
 	<td></td>
 </tr>
 <tr>
@@ -132,16 +267,6 @@
 	<td>blur</td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=user_type_text</td>
-	<td>${AccountType}</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=user_type_text</td>
-	<td>blur</td>
-</tr>
-<tr>
 	<td>check</td>
 	<td>id=reconcile_checkbox_</td>
 	<td></td>
@@ -159,6 +284,61 @@
 <tr>
 	<td>label</td>
 	<td>JumpTarget_Reconcile</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>fldCode</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>fldName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=type</td>
+	<td>fldType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=user_type_text</td>
+	<td>fldUser_Type_Text</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldUser_Type_Text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
@@ -199,7 +379,7 @@
 <tr>
 	<td>endForJson</td>
 	<td>--- End For JSON ---</td>
-	<td></td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>label</td>
