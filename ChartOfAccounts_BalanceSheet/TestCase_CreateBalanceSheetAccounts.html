@@ -208,7 +208,7 @@
 </tr>
 <tr>
 	<td>while</td>
-	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${fldCode}&quot; == &quot;&quot;) || (&quot;${fldName}&quot; == &quot;&quot;) || (&quot;${fldType}&quot; == &quot;&quot;) || (&quot;${fldUser_Type_Text}&quot; == &quot;&quot;))								</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${fldCode}&quot; == &quot;&quot;) || (&quot;${fldName}&quot; == &quot;&quot;) || (&quot;${fldType}&quot; == &quot;&quot;) || (&quot;${fldUser_Type_Text}&quot; == &quot;&quot;))</td>
 	<td></td>
 </tr>
 <tr>
@@ -242,11 +242,6 @@
 	<td>${acctCode}</td>
 </tr>
 <tr>
-	<td>setSpeed</td>
-	<td>1</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=name</td>
 	<td>${acctTitle}</td>
@@ -267,17 +262,32 @@
 	<td>blur</td>
 </tr>
 <tr>
-	<td>check</td>
+	<td>storeValue</td>
 	<td>id=reconcile_checkbox_</td>
-	<td></td>
+	<td>fldReconcile_Checkbox_</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;fldReconcile_Checkbox_&quot;]==&quot;on&quot; ? 1 : 0;</td>
+	<td>Actual</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;acctReconcile&quot;]==&quot;true&quot; ? 1 : 0;</td>
+	<td>Intended</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;Actual&quot;]==storedVars[&quot;Intended&quot;]&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;true&nbsp;&nbsp;:&nbsp;&nbsp;false ;</td>
+	<td>correctAlready</td>
 </tr>
 <tr>
 	<td>gotoIf</td>
-	<td>${acctReconcile}</td>
+	<td>${correctAlready}</td>
 	<td>JumpTarget_Reconcile</td>
 </tr>
 <tr>
-	<td>uncheck</td>
+	<td>click</td>
 	<td>id=reconcile_checkbox_</td>
 	<td></td>
 </tr>
@@ -285,6 +295,11 @@
 	<td>label</td>
 	<td>JumpTarget_Reconcile</td>
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=reconcile_checkbox_</td>
+	<td>blur</td>
 </tr>
 <tr>
 	<td>storeValue</td>
@@ -322,9 +337,9 @@
 	<td>fldUser_Type_Text</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${fldUser_Type_Text}</td>
-	<td></td>
+	<td>storeValue</td>
+	<td>id=reconcile_checkbox_</td>
+	<td>fldReconcile_Checkbox_</td>
 </tr>
 <tr>
 	<td>echo</td>
@@ -332,8 +347,53 @@
 	<td></td>
 </tr>
 <tr>
-	<td>endWhile</td>
+	<td>echo</td>
+	<td>${fldUser_Type_Text}</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;acctReconcile&quot;]==&quot;true&quot; ? 1 : 0;</td>
+	<td>Intended</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars[&quot;fldReconcile_Checkbox_&quot;]==&quot;on&quot; ? 1 : 0;</td>
+	<td>Actual</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td>storedVars[&quot;Actual&quot;]==storedVars[&quot;Intended&quot;]?&quot;MATCHING&quot;:&quot;NOT MATCHING&quot;;</td>
+	<td>MATCHING</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldUser_Type_Text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldUser_Type_Text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldReconcile_Checkbox_}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctReconcile}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${tmp}</td>
 	<td></td>
 </tr>
 <tr>
@@ -342,8 +402,13 @@
 	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>setSpeed</td>
-	<td>${PriorSpeed}</td>
+	<td>150</td>
 	<td></td>
 </tr>
 <tr>
@@ -354,6 +419,11 @@
 <tr>
 	<td>click</td>
 	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
