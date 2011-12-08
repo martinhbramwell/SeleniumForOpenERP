@@ -92,6 +92,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>store</td>
+	<td>**************</td>
+	<td>AccountType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${AccountType}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>forJson</td>
 	<td>ChartOfAccounts_ProfitAndLossStatement.json</td>
 	<td></td>
@@ -138,7 +148,7 @@
 </tr>
 <tr>
 	<td>storeEval</td>
-	<td>5</td>
+	<td>4</td>
 	<td>Crowbar</td>
 </tr>
 <tr>
@@ -202,19 +212,34 @@
 	<td>fldReconcile_Checkbox_</td>
 </tr>
 <tr>
+	<td>store</td>
+	<td>false</td>
+	<td>MATCHING</td>
+</tr>
+<tr>
 	<td>label</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 </tr>
 <tr>
 	<td>while</td>
-	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${fldCode}&quot; == &quot;&quot;) || (&quot;${fldName}&quot; == &quot;&quot;) || (&quot;${fldType}&quot; == &quot;&quot;) || (&quot;${fldUser_Type_Text}&quot; == &quot;&quot;))</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${MATCHING}&quot; == false) || (&quot;${fldCode}&quot; != &quot;${acctCode}&quot;) || (&quot;${fldName}&quot; != &quot;${acctTitle}&quot;) || (&quot;${fldType}&quot; != &quot;${internaltype}&quot;) || (&quot;${fldUser_Type_Text}&quot; != &quot;${AccountType}&quot;))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['AccountType'].substring(0,storedVars['AccountType'].length-1)</td>
+	<td>AccountType_Chk</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${AccountType_Chk}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=user_type_text</td>
-	<td>${AccountType}</td>
+	<td>${AccountType_Chk}</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -224,7 +249,7 @@
 <tr>
 	<td>fireEvent</td>
 	<td>id=user_type_text</td>
-	<td>blur</td>
+	<td>focus</td>
 </tr>
 <tr>
 	<td>fireEvent</td>
@@ -234,7 +259,7 @@
 <tr>
 	<td>fireEvent</td>
 	<td>id=user_type_text</td>
-	<td>blur</td>
+	<td>focus</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -245,6 +270,11 @@
 	<td>type</td>
 	<td>id=name</td>
 	<td>${acctTitle}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['InternalType'].toLowerCase()</td>
+	<td>internaltype</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -307,29 +337,14 @@
 	<td>fldCode</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${fldCode}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeValue</td>
 	<td>id=name</td>
 	<td>fldName</td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${fldName}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeValue</td>
 	<td>id=type</td>
 	<td>fldType</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${fldType}</td>
-	<td></td>
 </tr>
 <tr>
 	<td>storeValue</td>
@@ -343,12 +358,7 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${Crowbar}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${fldUser_Type_Text}</td>
+	<td>${InternalType}</td>
 	<td></td>
 </tr>
 <tr>
@@ -362,13 +372,13 @@
 	<td>Actual</td>
 </tr>
 <tr>
-	<td>assertEval</td>
-	<td>storedVars[&quot;Actual&quot;]==storedVars[&quot;Intended&quot;]?&quot;MATCHING&quot;:&quot;NOT MATCHING&quot;;</td>
+	<td>storeEval</td>
+	<td>storedVars[&quot;Actual&quot;]==storedVars[&quot;Intended&quot;]?&quot;true&quot;:&quot;false&quot;;</td>
 	<td>MATCHING</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${fldUser_Type_Text}</td>
+	<td>${AccountType}</td>
 	<td></td>
 </tr>
 <tr>
@@ -378,12 +388,22 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${fldReconcile_Checkbox_}</td>
+	<td>${internaltype}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${acctReconcile}</td>
+	<td>${fldType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${acctTitle}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${fldName}</td>
 	<td></td>
 </tr>
 <tr>
@@ -393,7 +413,87 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${tmp}</td>
+	<td>${fldCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${MATCHING}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar} - 1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${Crowbar} &gt; 0</td>
+	<td>PAUSE</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td> STOP HERE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>PAUSE</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(&quot;${MATCHING}&quot; == false)</td>
+	<td>temp</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${temp}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(&quot;${fldCode}&quot; != &quot;${acctCode}&quot;)</td>
+	<td>temp</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${temp}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(&quot;${fldName}&quot; != &quot;${acctTitle}&quot;)</td>
+	<td>temp</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${temp}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(&quot;${fldType}&quot; != &quot;${internaltype}&quot;)</td>
+	<td>temp</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${temp}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(&quot;${fldUser_Type_Text}&quot; != &quot;${AccountType}&quot;)</td>
+	<td>temp</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${temp}</td>
 	<td></td>
 </tr>
 <tr>
@@ -408,8 +508,13 @@
 </tr>
 <tr>
 	<td>setSpeed</td>
-	<td>150</td>
+	<td>1</td>
 	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.............................................................................</td>
+	<td>.............................................................................</td>
 </tr>
 <tr>
 	<td>label</td>
