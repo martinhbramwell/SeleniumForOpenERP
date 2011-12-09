@@ -232,13 +232,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Save &amp; Edit</td>
+	<td>selectWindow</td>
+	<td>name=undefined</td>
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>name=undefined</td>
+	<td>waitForElementPresent</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
 	<td></td>
 </tr>
 <tr>
@@ -250,6 +255,41 @@
 	<td>waitForTable</td>
 	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[3]/td/table.0.3</td>
 	<td>Unreconcile</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//li[2]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//li[2]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=audit_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=audit_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.tab-title &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
 </tr>
 <tr>
 	<td>close</td>
