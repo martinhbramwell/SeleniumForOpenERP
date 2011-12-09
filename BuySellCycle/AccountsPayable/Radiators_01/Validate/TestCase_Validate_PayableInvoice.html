@@ -123,7 +123,22 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>//button[@type='button' and @title='Unpaid Invoices']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[@type='button' and @title='Unpaid Invoices']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>css=span[name=&quot;user_id&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -134,6 +149,16 @@
 <tr>
 	<td>click</td>
 	<td>css=span[name=&quot;partner_id&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>//button[@type='button' and @title='Unpaid Invoices']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -172,13 +197,18 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=194</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>id=194</td>
 	<td>Refund</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=194</td>
+	<td>setSpeed</td>
+	<td>500</td>
 	<td></td>
 </tr>
 <tr>
@@ -189,6 +219,26 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.filter_with_icon.inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=button.filter_with_icon.inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.filter_with_icon.inactive</td>
 	<td></td>
 </tr>
 <tr>
