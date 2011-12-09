@@ -93,11 +93,6 @@
 </tr>
 <tr>
 	<td>waitForElementNotPresent</td>
-	<td>css=span[name=&quot;name&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementNotPresent</td>
 	<td>css=img.listImage</td>
 	<td></td>
 </tr>
@@ -117,13 +112,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementNotPresent</td>
-	<td>css=span[name=&quot;name&quot;]</td>
+	<td>waitForElementPresent</td>
+	<td>css=img.listImage</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>css=img.listImage</td>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -142,14 +137,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>assertEval</td>
-	<td>${qtyAvailable}</td>
-	<td>${quantityProduct}</td>
-</tr>
-<tr>
-	<td>setSpeed</td>
-	<td>${PriorSpeed}</td>
-	<td></td>
+	<td>verifyEval</td>
+	<td>${qtyAvailable}&gt;=${quantityProduct}</td>
+	<td>true</td>
 </tr>
 <tr>
 	<td>endForJson</td>
