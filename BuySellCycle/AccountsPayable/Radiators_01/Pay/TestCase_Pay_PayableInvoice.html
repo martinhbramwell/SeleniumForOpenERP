@@ -143,47 +143,32 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=button_reset_taxes</td>
+	<td>id=invoice_pay_customer</td>
 	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=check_total</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=invoice_open</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=212</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=invoice_open</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=state</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Duplicate</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>id=194</td>
-	<td>Refund</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=194</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=invoice_cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=invoice_pay_customer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=194</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=invoice_cancel</td>
 	<td></td>
 </tr>
 <tr>
@@ -262,14 +247,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=line_dr_ids_btn_</td>
-	<td></td>
-</tr>
-<tr>
-	<td>selectWindow</td>
-	<td>name=undefined</td>
-	<td></td>
+	<td>waitForTable</td>
+	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[3]/td/table.0.3</td>
+	<td>Unreconcile</td>
 </tr>
 <tr>
 	<td>close</td>
@@ -292,22 +272,12 @@
 	<td></td>
 </tr>
 <tr>
-	<td>chooseOkOnNextConfirmation</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=_terp_list_delete_record</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertConfirmation</td>
-	<td>Do you really want to delete selected record(s) ?</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
 	<td>css=button[title=&quot;Filter records.&quot;]</td>
 	<td></td>
 </tr>
@@ -324,6 +294,11 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeConfirmation</td>
+	<td>MyConfirmation</td>
 	<td></td>
 </tr>
 <tr>
