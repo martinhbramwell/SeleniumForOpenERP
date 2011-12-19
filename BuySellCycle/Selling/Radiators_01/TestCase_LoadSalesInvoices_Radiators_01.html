@@ -167,9 +167,19 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=picking_policy</td>
+	<td></td>
+</tr>
+<tr>
 	<td>select</td>
 	<td>id=picking_policy</td>
 	<td>label=Complete Delivery</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=order_policy</td>
+	<td></td>
 </tr>
 <tr>
 	<td>select</td>
@@ -262,61 +272,6 @@
 	<td>Crowbar</td>
 </tr>
 <tr>
-	<td>goto</td>
-	<td>noItems</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=order_line/product_uom_qty</td>
-	<td>focus</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=order_line/product_uom_qty</td>
-	<td>${quantityProduct}</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=order_line/product_id_text</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=order_line/price_unit</td>
-	<td>focus</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=order_line/price_unit</td>
-	<td>${sellpriceProduct}</td>
-</tr>
-<tr>
-	<td>fireEvent</td>
-	<td>id=order_line/product_id_text</td>
-	<td>blur</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=button.button-a</td>
-	<td></td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>label</td>
-	<td>noItems</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeValue</td>
 	<td>id=order_line/product_id_text</td>
 	<td>product</td>
@@ -338,7 +293,7 @@
 </tr>
 <tr>
 	<td>while</td>
-	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${product}&quot; == &quot;&quot;) || (&quot;${uom}&quot; == &quot;&quot;) || (&quot;${price}&quot; == &quot;&quot;))								</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${product}&quot; == &quot;&quot;) || (&quot;${uom}&quot; == &quot;&quot;) || (&quot;${price}&quot; == &quot;&quot;))</td>
 	<td></td>
 </tr>
 <tr>
@@ -402,6 +357,36 @@
 	<td></td>
 </tr>
 <tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_uom_qty</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/product_uom_qty</td>
+	<td>${quantityProduct}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_uom_qty</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/price_unit</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/price_unit</td>
+	<td>${sellpriceProduct}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/price_unit</td>
+	<td>blur</td>
+</tr>
+<tr>
 	<td>endWhile</td>
 	<td></td>
 	<td></td>
@@ -410,26 +395,6 @@
 	<td>label</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
 	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=order_line/product_qty</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=order_line/product_qty</td>
-	<td>${quantityProduct}</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=order_line/price_unit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=order_line/price_unit</td>
-	<td>${buypriceProduct}</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -443,17 +408,67 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>id=order_confirm</td>
-	<td>Confirm Order</td>
-</tr>
-<tr>
-	<td>waitForText</td>
 	<td>id=button_dummy</td>
 	<td>Compute</td>
 </tr>
 <tr>
+	<td>storeValue</td>
+	<td>id=amount_total</td>
+	<td>TotalAmount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button_dummy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>250</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; (${TotalAmount} &lt; 1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=amount_total</td>
+	<td>TotalAmount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=order_confirm</td>
+	<td>Confirm Order</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=order_confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=order_line_btn_</td>
 	<td></td>
 </tr>
 <tr>
@@ -462,14 +477,24 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForTextPresent</td>
+	<td> is scheduled for the </td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Save &amp; Edit</td>
+	<td>Save &amp; Edit</td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Save</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=purchase_confirm</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>id=state</td>
+	<td>In Progress</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
