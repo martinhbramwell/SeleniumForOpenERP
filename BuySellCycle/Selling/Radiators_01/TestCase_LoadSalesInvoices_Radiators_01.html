@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>echo</td>
+	<td>Starting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>forJson</td>
+	<td>SellRadiators_01.json</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>link=Sales Orders</td>
+	<td>Sales Orders</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Sales Orders</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nameCustomer}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nameProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${quantityProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${sellpriceProduct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=filter_list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTitle</td>
+	<td>Sales Orders - OpenERP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=partner_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=pricelist_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=pricelist_id_text</td>
+	<td>pricelist</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=partner_id_text</td>
+	<td>partner_address</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=partner_order_id_text</td>
+	<td>contact</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${pricelist}&quot; == &quot;&quot;) || (&quot;${partner_address}&quot; == &quot;&quot;) || (&quot;${contact}&quot; == &quot;&quot;))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=partner_id_text</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=partner_id_text</td>
+	<td>${nameCustomer}</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=partner_id_text</td>
+	<td>${nameCustomer}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=partner_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=picking_policy</td>
+	<td>label=Complete Delivery</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=order_policy</td>
+	<td>label=Invoice On Order After Delivery</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.tab-title &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=pricelist_id_text</td>
+	<td>pricelist</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=partner_id_text</td>
+	<td>partner_address</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=partner_order_id_text</td>
+	<td>contact</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pricelist}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${partner_address}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${contact}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=order_line_btn_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=order_line/product_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>noItems</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_uom_qty</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/product_uom_qty</td>
+	<td>${quantityProduct}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/price_unit</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/price_unit</td>
+	<td>${sellpriceProduct}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button-a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>noItems</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/product_id_text</td>
+	<td>product</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/price_unit</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/product_uom_text</td>
+	<td>uom</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${product}&quot; == &quot;&quot;) || (&quot;${uom}&quot; == &quot;&quot;) || (&quot;${price}&quot; == &quot;&quot;))								</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_id_text</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/product_id_text</td>
+	<td>${nameProduct}</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=order_line/product_id_text</td>
+	<td>${nameProduct}</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=order_line/product_id_text</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/product_id_text</td>
+	<td>product</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/price_unit</td>
+	<td>price</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=order_line/product_uom_text</td>
+	<td>uom</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${product}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${price}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${uom}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=order_line/product_qty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/product_qty</td>
+	<td>${quantityProduct}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=order_line/price_unit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=order_line/price_unit</td>
+	<td>${buypriceProduct}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button-a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=span[name=&quot;name&quot;]</td>
+	<td>${nameProduct}</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=order_confirm</td>
+	<td>Confirm Order</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=button_dummy</td>
+	<td>Compute</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=order_confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>id=order_confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=purchase_confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endForJson</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${Prior}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+</tbody></table>
+</body>
+</html>
