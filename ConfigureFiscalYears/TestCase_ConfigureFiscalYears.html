@@ -96,13 +96,83 @@
 	<td></td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${yearName}</td>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>400</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=period_ids_btn_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td>aYear</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=date_start</td>
+	<td>aStart</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=date_stop</td>
+	<td>anEnd</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aYear</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=date_start</td>
+	<td>aStart</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=date_stop</td>
+	<td>anEnd</td>
 </tr>
 <tr>
 	<td>setSpeed</td>
 	<td>120</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${aYear}&quot; == &quot;&quot;) || (&quot;${aCode}&quot; == &quot;&quot;) || (&quot;${aStart}&quot; == &quot;&quot;) || (&quot;${anEnd}&quot; == &quot;&quot;))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${yearName}</td>
 	<td></td>
 </tr>
 <tr>
@@ -169,6 +239,66 @@
 	<td>setSpeed</td>
 	<td>${PriorSpeed}</td>
 	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aYear</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=date_start</td>
+	<td>aStart</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=date_stop</td>
+	<td>anEnd</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aYear}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aStart}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${anEnd}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>click</td>

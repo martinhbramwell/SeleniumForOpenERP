@@ -117,6 +117,71 @@
 	<td></td>
 </tr>
 <tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span.pager_info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=partner_ids_add_records</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=active_checkbox_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=parent_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; (&quot;${aName}&quot; == &quot;&quot;)</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=name</td>
 	<td>${nameCategory}</td>
@@ -125,6 +190,36 @@
 	<td>fireEvent</td>
 	<td>id=name</td>
 	<td>blur</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>setSpeed</td>

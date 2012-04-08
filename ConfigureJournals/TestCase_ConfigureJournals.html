@@ -31,8 +31,58 @@
 	<td>PriorSpeed</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>setSpeed</td>
-	<td>200</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=clear_all_filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.filter_with_icon.inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=clear_all_filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=h2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -113,6 +163,96 @@
 <tr>
 	<td>setSpeed</td>
 	<td>350</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=default_credit_account_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=default_debit_account_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=sequence_id_text</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=view_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=code</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=view_id</td>
+	<td>aView</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=type</td>
+	<td>aType</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=sequence_id_text</td>
+	<td>aSequence</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=default_debit_account_id_text</td>
+	<td>aDefaultDebitAcct</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=default_credit_account_id_text</td>
+	<td>aDefaultCreditAcct</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${aCode}&quot; == &quot;&quot;) || (&quot;${aName}&quot; == &quot;&quot;) || (&quot;${aView}&quot; == &quot;&quot;) || (&quot;${aType}&quot; == &quot;&quot;) || (&quot;${aSequence}&quot; == &quot;&quot;) || (&quot;${aDefaultDebitAcct}&quot; == &quot;&quot;) || (&quot;${aDefaultCreditAcct}&quot; == &quot;&quot;))</td>
 	<td></td>
 </tr>
 <tr>
@@ -234,6 +374,96 @@
 	<td>fireEvent</td>
 	<td>id=default_credit_account_id_text</td>
 	<td>blur</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aCode}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=view_id</td>
+	<td>aView</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aView}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=type</td>
+	<td>aType</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aType}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=sequence_id_text</td>
+	<td>aSequence</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aSequence}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=default_debit_account_id_text</td>
+	<td>aDefaultDebitAcct</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aDefaultDebitAcct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=default_credit_account_id_text</td>
+	<td>aDefaultCreditAcct</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${aDefaultCreditAcct}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>label</td>

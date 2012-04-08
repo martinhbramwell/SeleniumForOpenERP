@@ -16,6 +16,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setTimeout</td>
+	<td>90000</td>
+	<td>90000</td>
+</tr>
+<tr>
 	<td>waitForTitle</td>
 	<td>Administration Dashboard - OpenERP</td>
 	<td></td>
@@ -56,8 +61,53 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=clear_all_filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>property</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -154,6 +204,11 @@
 	<td>waitForElementPresent</td>
 	<td>id=res_id_open</td>
 	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=fields_id_select</td>
+	<td>focus</td>
 </tr>
 <tr>
 	<td>click</td>
