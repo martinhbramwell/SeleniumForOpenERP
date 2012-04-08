@@ -17,6 +17,11 @@
 	<td>PriorSpeed</td>
 </tr>
 <tr>
+	<td>setTimeout</td>
+	<td>90000</td>
+	<td>90000</td>
+</tr>
+<tr>
 	<td>echo</td>
 	<td>${PriorSpeed}</td>
 	<td></td>
@@ -39,6 +44,16 @@
 <tr>
 	<td>setSpeed</td>
 	<td>400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>TmpSpeed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${TmpSpeed}</td>
 	<td></td>
 </tr>
 <tr>
@@ -82,6 +97,56 @@
 	<td></td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>${name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${report_type}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${close_method}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${report_type}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+	<td>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>(${Crowbar} &gt; 0) &amp;&amp; ((&quot;${aName}&quot; == &quot;&quot;) || (&quot;${aCode}&quot; == &quot;&quot;))</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=name</td>
 	<td>${name}</td>
@@ -102,9 +167,34 @@
 	<td>label=${report_type}</td>
 </tr>
 <tr>
+	<td>storeValue</td>
+	<td>id=name</td>
+	<td>aName</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=code</td>
+	<td>aCode</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${Crowbar}-1</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>label</td>
 	<td>.............................................................................</td>
 	<td>.............................................................................</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -135,6 +225,11 @@
 	<td>label</td>
 	<td>.............................................................................</td>
 	<td>.............................................................................</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
+	<td>* ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * ! * !</td>
 </tr>
 <tr>
 	<td>endForJson</td>
