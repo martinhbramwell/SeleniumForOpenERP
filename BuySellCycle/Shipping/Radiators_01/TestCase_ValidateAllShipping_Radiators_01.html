@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configure Fiscal Years</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Configure Fiscal Years</td></tr>
+</thead><tbody>
+
+<tr>
+	<td>echo</td>
+	<td>Starting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSpeed</td>
+	<td>PriorSpeed</td>
+	<td>PriorSpeed</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delivery Orders</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>250</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//button[@type=&quot;button&quot; and @title=&quot;Confirmed Delivery Orders&quot; and @class=&quot;filter_with_icon inactive&quot;]</td>
+	<td>//button[@type=&quot;button&quot; and @title=&quot;Confirmed Pickings&quot; and @class=&quot;filter_with_icon inactive&quot;]</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[@type='button' and @title=&quot;Confirmed Delivery Orders&quot; and @class=&quot;filter_with_icon inactive&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>//button[@type='button' and @title=&quot;Confirmed Delivery Orders&quot; and @class=&quot;filter_with_icon inactive&quot;]</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button' and @title=&quot;Confirmed Delivery Orders&quot; and @class=&quot;filter_with_icon inactive&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//button[@type='button' and @title=&quot;Confirmed Delivery Orders&quot; and @class=&quot;filter_with_icon active&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.filter_with_icon.active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=button.filter_with_icon.inactive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>15</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${DetectingDeleteButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button[title=&quot;Filter records.&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=clear_all_filters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=_terp_list_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>((${Crowbar} &gt; 0) &amp;&amp; (${DetectingDeleteButton}))</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span[name=&quot;name&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=action_assign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Duplicate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=force_assign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_assign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>id=action_assign</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=state</td>
+	<td>Available</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=action_process</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=product_moves_out_btn_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=do_partial</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=do_partial</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>is waiting for validation.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Save &amp; Edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=tree</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.checkbox.grid-record-selector</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>id=_terp_list_delete_record</td>
+	<td>DetectingDeleteButton</td>
+</tr>
+<tr>
+	<td>setSpeed</td>
+	<td>${PriorSpeed}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${DetectingDeleteButton}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>eval(${Crowbar} - 1)</td>
+	<td>Crowbar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${Crowbar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>EOF</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+	<td>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

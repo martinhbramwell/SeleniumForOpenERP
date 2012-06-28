@@ -3,34 +3,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- link rel="selenium.base" href="http://192.168.122.165:8080/" /  -->
-<title>New Test</title>
+<link rel="selenium.base" href="http://www.fleetingclouds.net:8080/" />
+<title>TestCase_LogIn</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">New Test</td></tr>
+<tr><td rowspan="1" colspan="3">TestCase_LogIn</td></tr>
 </thead><tbody>
 <tr>
-	<td>click</td>
-	<td>css=button.static_boxes</td>
+	<td>open</td>
+	<td>/openerp/login?db=&amp;location=%2Fopenerp%3F&amp;user=</td>
 	<td></td>
 </tr>
 <tr>
-	<td>setTimeout</td>
-	<td>600000</td>
-	<td>600000</td>
+	<td>type</td>
+	<td>id=user</td>
+	<td>admin</td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
+	<td>type</td>
+	<td>id=password</td>
+	<td>okok</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>//form[@id='view_form']/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td</td>
+	<td>clickAndWait</td>
+	<td>//button[@type='submit']</td>
 	<td></td>
 </tr>
+
 </tbody></table>
 </body>
 </html>
